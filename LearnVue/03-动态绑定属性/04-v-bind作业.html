@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<!--作业需求：点击列表中的哪一项，那么该项的文字变成红色-->
+<div id="app">
+    <ul>
+        <li v-for="(m,index) in movices"
+            :class="{active: index === currentIndex}"
+            @click="mClick(index)">{{index}}.{{m}}</li>
+    </ul>
+</div>
+    <script src="../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                movices: ['海王','海尔兄弟','火影忍者','进击的巨人'],
+                currentIndex: 0   //变量用于记录状态
+            },
+            methods: {
+                mClick(index){
+                    this.currentIndex = index
+                }
+            }
+        })
+    </script>
+</body>
+</html>

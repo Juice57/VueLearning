@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <span v-if="isUser">
+    <label for="username">用户账号</label>
+    <input type="text" id="username" placeholder="用户账号" key="username">
+<!--    若不加key属性值，在切换类型时input输入框中的文本内容会因为虚拟Dom的存在 渲染第二个label时复用第一个的数据
+即文本框中的内容不被清空-->
+  </span>
+  <span v-else>
+    <label for="useremail">用户邮箱</label>
+    <input type="text" id="useremail" placeholder="用户邮箱" key="useremail">
+  </span>
+  <button @click="isUser = !isUser">切换类型</button>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+     isUser: true
+    }
+  })
+</script>
+</body>
+</html>
