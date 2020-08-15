@@ -30,12 +30,17 @@ export class Person {
   }
 }
 
-//4.export default
-const address = '北京市'
+//4.export default：在同一模块中，不允许同时存在多个
+// const address = '北京市'
 // export {
 //   address
 // }
 
 // export const address = '北京市'
 
-export default  address
+// const address = '北京市'
+// export default  address
+
+export default function (argument) {
+  console.log(argument);
+}

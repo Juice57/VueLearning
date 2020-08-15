@@ -23,4 +23,11 @@ p.run()
 
 //4.导入export default
 import addr from "./aaa.js";
-console.log(addr);
+addr('你好啊');
+
+//5.统一全部导入
+// import {flag, num, num1, height, Person, mul, sum} from "./aaa.js";
+import * as aaa from "./aaa.js"
+
+console.log(aaa.flag);
+console.log(aaa.height);
