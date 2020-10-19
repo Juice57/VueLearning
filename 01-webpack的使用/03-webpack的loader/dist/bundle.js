@@ -567,62 +567,48 @@ function updateLink (link, options, obj) {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_info__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_info___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__js_info__);
 //1.使用commonjs的模块化规范
 const {add, mul} = __webpack_require__(3)
 
-console.log(add(20, 30));
-console.log(mul(20, 30));
+console.log(add(20,30));
+console.log(mul(20,30));
 
 //2.使用ES6的模块化的规范
 
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_info__["c" /* name */]);
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_info__["a" /* age */]);
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_info__["b" /* height */]);
+console.log(__WEBPACK_IMPORTED_MODULE_0__js_info__["name"]);
+console.log(__WEBPACK_IMPORTED_MODULE_0__js_info__["age"]);
+console.log(__WEBPACK_IMPORTED_MODULE_0__js_info__["height"]);
 
 //3.依赖css文件
-__webpack_require__(5)
-
-//npm install --save-dev css-loader@2.0.2 安装css-loader
-//npm install style-loader@0.23.1 --save-dev 安装style-loader
-//在webpack.config.js中配置
-//npm run build
+__webpack_require__(5);
+document.writeln('你好，李银河');
 
 //4.依赖less文件
 __webpack_require__(10)
-document.writeln('<h2>你好，世界。<h2>');
-
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports) {
 
-function add(num1, num2) {
-  return num1 + num2
+function add(num1,num2) {
+  return num1 + num2;
 }
 
-function mul(num1, num2) {
-  return num1 * num2
+function mul(num1,num2) {
+  return num1 * num2;
+
 }
 
-module.exports = {
+module.exports={
   add,
   mul
 }
 
 /***/ }),
 /* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const name = 'why';
-/* harmony export (immutable) */ __webpack_exports__["c"] = name;
-
-const age = 18;
-/* harmony export (immutable) */ __webpack_exports__["a"] = age;
-
-const height = 1.8;
-/* harmony export (immutable) */ __webpack_exports__["b"] = height;
+/***/ (function(module, exports) {
 
 
 
@@ -720,7 +706,7 @@ module.exports = function escape(url) {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "9704ed4407454776bdb2a38881338e98.jpg";
+module.exports = __webpack_require__.p + "img/test.9704ed44.jpg";
 
 /***/ }),
 /* 9 */
